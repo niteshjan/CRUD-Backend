@@ -37,7 +37,7 @@ public class CustomerService {
                 .findFirst()
                 .get();*/
         Optional<Customer> optionalCustomer = customerDao.findById(customerId);
-        if(optionalCustomer.isEmpty()){
+        if(!optionalCustomer.isPresent()){
             throw new CustomerNotFoundException("Customer Record not available");
         }
         return optionalCustomer.get();
