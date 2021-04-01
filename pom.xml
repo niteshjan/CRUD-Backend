@@ -65,7 +65,7 @@
 				<executions>
 					<execution>
 						<configuration>
-							<mainClass>com.nitesh.springLearning.SpringLearningApplication</mainClass>
+							<mainClass>SpringLearningApplication</mainClass>
 						</configuration>
 					</execution>
 				</executions>
