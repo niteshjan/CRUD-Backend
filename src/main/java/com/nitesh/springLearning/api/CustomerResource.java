@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/customer")
+@RequestMapping(value = "customer")
 public class CustomerResource {
     @Autowired
     private CustomerService customerService;
-    @PostMapping()
+    @PostMapping
     public Customer addCustomer(@RequestBody Customer customer){
         return customerService.addCustomer(customer);
     }

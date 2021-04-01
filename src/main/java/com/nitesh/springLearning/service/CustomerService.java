@@ -24,6 +24,7 @@ public class CustomerService {
         customer.setCustomerId(customerCount);
         customerList.add(customer);
         return customer;*/
+        System.out.println("saving data");
         return customerDao.save(customer);
     }
     public List<Customer> getCustomers(){
