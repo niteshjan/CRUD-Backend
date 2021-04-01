@@ -1,4 +1,4 @@
 FROM openjdk:8
-COPY ./target/springLearning-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./
+COPY ./target/springLearning-0.0.1-SNAPSHOT.jar ./
 WORKDIR ./
-CMD ["java", "-jar", "springLearning-0.0.1-SNAPSHOT-jar-with-dependencies.jar"]
+CMD ["java", "-jar", "springLearning-0.0.1-SNAPSHOT.jar"]
