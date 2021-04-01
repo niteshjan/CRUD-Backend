@@ -59,13 +59,23 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.4.4</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
 				<executions>
 					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
 						<configuration>
-							<mainClass>SpringLearningApplication</mainClass>
+							<archive>
+								<manifest>
+									<mainClass>com.nitesh.springLearning.SpringLearningApplication</mainClass>
+								</manifest>
+							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
 						</configuration>
 					</execution>
 				</executions>
